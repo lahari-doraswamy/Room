@@ -17,19 +17,19 @@ public class NoteRepo {
         notelist=noteDao.getAllData();
     }
     public void insertData(Note note){
-        new DeleteTask(noteDao).execute(note);
-    }
-    public void updateData(Note note){
         new InsertTask(noteDao).execute(note);
     }
-    public void deleteData(Note note){
+    public void updateData(Note note){
         new UpdateTask(noteDao).execute(note);
+    }
+    public void deleteData(Note note){
+        new DeleteTask(noteDao).execute(note);
     }
     public LiveData<List<Note>> getAllData(){
         return notelist;
     }
     private static class InsertTask extends AsyncTask<Note,Void,Void>{
-private  NoteDao noteDao;
+    private  NoteDao noteDao;
 
         public InsertTask(NoteDao noteDao) {
             this.noteDao = noteDao;

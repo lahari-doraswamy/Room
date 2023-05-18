@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DataInsertActivity">
+    tools:context=".DataInsertActivity"
+    android:layout_marginTop="20dp">
 
 
     <EditText
@@ -13,9 +14,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:ems="10"
+        android:hint="Enter the title"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="Enter the titlr"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.432"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,19 +27,23 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="enter the note"
         android:inputType="textPersonName"
         android:minHeight="48dp"
-        android:text="enter the note"
         app:layout_constraintEnd_toEndOf="@+id/title"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteY="213dp" />
+        tools:layout_editor_absoluteY="213dp"
+        android:layout_marginTop="40dp"/>
 
     <Button
         android:id="@+id/add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="276dp"
         android:text="Button"
-        tools:layout_editor_absoluteX="127dp"
-        tools:layout_editor_absoluteY="316dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/disp"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="@+id/disp"
         tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>
